@@ -2,7 +2,7 @@ import pandas as pd
 from index import RetailPrices,Session
 
 with Session.begin() as db:
-    data=pd.read_csv("data/retail_prices.csv")  
+    data=pd.read_csv("retail_prices.csv")  
     for index ,row in data.iterrows():
         retail_prices=RetailPrices(
         product_id=row[0],
